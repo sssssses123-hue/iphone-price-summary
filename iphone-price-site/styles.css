@@ -1,0 +1,220 @@
+/* ============================================================
+   樣式表（styles.css）
+   iPhone 歷年起售價格網站 · 可自行調整配色與字級
+   ============================================================ */
+
+:root {
+  --bg: #f5f6fa;
+  --card: #ffffff;
+  --ink: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #e5e7ee;
+  --accent: #0a84ff;
+  --accent-dark: #0066d6;
+  --violet: #5e5ce6;
+  --green: #30b555;
+  --hero-grad: linear-gradient(135deg, #0b1026 0%, #16204a 42%, #263b7a 100%);
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(20, 30, 60, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+    "Microsoft JhengHei", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 22px; }
+
+/* ---------- 頁首 ---------- */
+.hero {
+  background: var(--hero-grad);
+  color: #fff;
+  padding: 56px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 28px;
+}
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(30px, 4.6vw, 48px);
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: 0.5px;
+}
+.hero .subtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  margin: 0 0 10px;
+}
+.hero .updated {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+.hero-illustration { display: flex; justify-content: center; }
+.hero-illustration svg { width: 100%; max-width: 380px; height: auto; }
+
+/* ---------- 統計卡片 ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: -38px 0 34px;
+  position: relative;
+  z-index: 2;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.stat .label { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.stat .value { font-size: 24px; font-weight: 700; letter-spacing: 0.3px; }
+
+/* ---------- 章節 ---------- */
+section { margin: 48px 0; }
+.section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
+.section-head h2 { font-size: 26px; margin: 0; letter-spacing: 0.5px; }
+.section-head .bar {
+  width: 6px; height: 24px; border-radius: 3px;
+  background: linear-gradient(var(--accent), var(--violet));
+}
+.section-head .desc { font-size: 14px; color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- 表格 ---------- */
+.table-card { overflow: hidden; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
+thead th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 14px 16px;
+  background: #fafbfe;
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0;
+}
+tbody td { padding: 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #f7f9ff; }
+.td-year { font-weight: 700; font-size: 17px; color: var(--accent-dark); white-space: nowrap; }
+.td-models { min-width: 280px; }
+.model-row {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;
+  padding: 4px 0;
+}
+.model-row + .model-row { border-top: 1px dashed var(--line); }
+.model-name { font-weight: 600; min-width: 150px; }
+.model-price { color: var(--ink); font-variant-numeric: tabular-nums; }
+.model-gb { font-size: 12px; color: var(--muted); }
+.td-cheapest .badge {
+  display: inline-block;
+  background: #e8f6ec; color: #17713b;
+  font-weight: 700; padding: 4px 10px; border-radius: 999px;
+  white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.td-note { color: var(--muted); font-size: 14px; }
+
+/* ---------- 走勢圖 ---------- */
+.chart-card { padding: 18px 12px 8px; }
+.chart-card svg { width: 100%; height: auto; display: block; }
+.grid { stroke: #eceff5; stroke-width: 1; }
+.axis { fill: #9aa0ab; font-size: 12px; }
+.line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.area { fill: url(#areaFill); }
+.dot { fill: #fff; stroke: var(--accent); stroke-width: 2.5; }
+.val { fill: var(--ink); font-size: 11.5px; font-weight: 700; }
+.year { fill: #9aa0ab; font-size: 11px; }
+
+/* ---------- 時間軸 ---------- */
+.timeline { list-style: none; margin: 0; padding: 8px 0; position: relative; }
+.timeline::before {
+  content: ""; position: absolute; left: 74px; top: 12px; bottom: 12px;
+  width: 2px; background: var(--line);
+}
+.milestone { display: flex; gap: 22px; padding: 16px 0; position: relative; }
+.ms-year {
+  flex: 0 0 52px; text-align: right; font-weight: 700; color: var(--accent-dark);
+  font-size: 16px; padding-top: 2px;
+}
+.ms-body { flex: 1; background: #fafbfe; border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; }
+.ms-body h3 { margin: 0 0 4px; font-size: 16px; }
+.ms-body p { margin: 0; color: var(--muted); font-size: 14px; }
+.timeline .dot-marker {
+  position: absolute; left: 67px; top: 22px; width: 12px; height: 12px;
+  border-radius: 50%; background: var(--accent); border: 3px solid #fff;
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* ---------- 選購建議 ---------- */
+.advice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.advice-card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.advice-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(20,30,60,0.12); }
+.advice-icon { font-size: 30px; margin-bottom: 10px; }
+.advice-card h3 { margin: 0 0 8px; font-size: 17px; }
+.advice-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* ---------- 注意事項 / 頁尾 ---------- */
+.notice { font-size: 13.5px; color: var(--muted); background: #fff8ec; border: 1px solid #ffe3b3; border-radius: 14px; padding: 14px 18px; }
+.notice strong { color: #a05a00; }
+
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 34px 0 48px; }
+footer a { color: var(--accent-dark); text-decoration: none; }
+
+/* ---------- 響應式 ---------- */
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-illustration { order: 2; }
+  .stats { grid-template-columns: repeat(2, 1fr); margin-top: -30px; }
+  .advice-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .stats { grid-template-columns: 1fr; }
+  .advice-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 54px; }
+  .timeline .dot-marker { left: 47px; }
+  .ms-year { flex-basis: 36px; font-size: 14px; }
+}

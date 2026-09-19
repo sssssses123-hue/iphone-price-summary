@@ -1,6 +1,3 @@
-# iphone-price-summary
-Meticulously crafted by a long-time Apple enthusiast—corrections welcome.
-
 # iPhone Launch Price History (2013–2026)
 
 A simple, static website for Apple fans that records the launch starting price of every iPhone from **2013 to 2026**, together with a price-trend chart, key milestones and buying advice. All content lives in a single data file, so the whole site can be updated without touching any other code.

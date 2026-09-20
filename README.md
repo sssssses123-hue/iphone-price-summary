@@ -1,4 +1,4 @@
-# iPhone Launch Price History (2013–2026)
+# iPhone Price Archive (2013–2026)
 
 🌐 **Live site:** https://sssssses123-hue.github.io/iphone-price-summary/
 
@@ -12,6 +12,9 @@ A static website for Apple fans that records the launch starting price of each i
 - Buying advice for different needs and budgets
 - Hand-crafted inline SVG illustration; no external image assets
 - Data / presentation separation: edit one data file to update the whole site
+- Interactive 50-model explorer with search, year filters, sorting, detail modals and side-by-side comparison
+- Device-specific SVG illustrations showing Home button, notch, Dynamic Island, camera layouts and foldable designs
+- Immersive Apple Park hero, product/people story wall and light/dark themes
 - Automated checks against Apple's official US and China store pages
 
 ## Automated Apple price monitoring
@@ -34,7 +37,9 @@ The monitoring state is stored in monitor/apple-price-state.json; the latest not
 | `index.html` | Page structure and hero illustration |
 | `styles.css` | Colors, fonts and layout |
 | `data.js` | **All prices, text, milestones and advice (edit this)** |
-| `app.js` | Reads `data.js` and renders the table, chart and cards |
+| `app.js` | Renders the interactive device explorer, charts, modals and comparison tools |
+| `assets/` | Locally hosted, credited photo assets used by the hero and story sections |
+| `CREDITS.md` | Image sources, authors and licenses |
 | `scripts/check-apple-prices.mjs` | Official Apple page monitor and update writer |
 | `monitor/apple-price-state.json` | Baseline used to detect meaningful changes |
 | `monitor/heartbeat.json` | Monthly activity marker that keeps the schedule enabled |
@@ -78,7 +83,7 @@ Free to use for personal reference.
 
 ---
 
-# iPhone 歷年起售價格全記錄（2013–2026）
+# iPhone Price Archive｜歷年起售價格（2013–2026）
 
 🌐 **線上網站：** https://sssssses123-hue.github.io/iphone-price-summary/
 
@@ -92,6 +97,9 @@ Free to use for personal reference.
 - 依需求與預算的選購建議
 - 內建 SVG 插圖，不依賴外部圖片
 - 資料與版面分離：改一個資料檔即可更新全站
+- 50 款互動式機型圖鑑：搜尋、年份篩選、排序、詳情彈窗與並排比較
+- 依各代外觀重繪 SVG：Home 鍵、瀏海、動態島、鏡頭排列與摺疊設計
+- 沉浸式 Apple Park 主視覺、產品／人物故事牆與亮暗主題
 - 每日自動檢查 Apple 美國與中國大陸官方商店頁面
 
 ## Apple 價格自動監測
@@ -109,7 +117,9 @@ Free to use for personal reference.
 | `index.html` | 頁面結構與首頁插圖 |
 | `styles.css` | 配色、字體與版面 |
 | `data.js` | **所有價格、文字、節點與選購建議（改這個）** |
-| `app.js` | 讀取 `data.js`，渲染表格、走勢圖與卡片 |
+| `app.js` | 渲染互動式機型圖鑑、走勢圖、彈窗與比較工具 |
+| `assets/` | 經授權並標註來源的本機照片素材 |
+| `CREDITS.md` | 圖片來源、作者與授權資訊 |
 | `scripts/check-apple-prices.mjs` | Apple 官方頁面監測與自動更新程式 |
 | `monitor/apple-price-state.json` | 判斷實質變動的基準資料 |
 | `monitor/heartbeat.json` | 每月活動標記，避免排程被 GitHub 停用 |

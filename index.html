@@ -3,83 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="iPhone 2013–2026 歷年起售價格全記錄，附價格走勢、里程碑與選購建議，供果粉參考。">
-  <title>iPhone 歷年起售價格全記錄</title>
+  <meta name="theme-color" content="#05070d">
+  <meta name="description" content="追蹤 2013–2026 每一代 iPhone 的首發起售價、外觀辨識、重要節點與選購建議。">
+  <meta property="og:title" content="iPhone Price Archive · 2013–2026">
+  <meta property="og:description" content="用價格、設計與時間軸，收藏十四年的 iPhone 進化史。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sssssses123-hue.github.io/iphone-price-summary/">
+  <meta property="og:image" content="https://sssssses123-hue.github.io/iphone-price-summary/assets/apple-park.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>iPhone Price Archive · 2013–2026</title>
+  <link rel="preload" as="image" href="assets/apple-park.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="scroll-progress" id="scroll-progress"></div>
 
-  <header class="hero">
-    <div class="wrap">
-      <div>
-        <span class="hero-kicker">Apple Fans · 價格沿革 2013–2026</span>
-        <h1 id="site-title">iPhone 歷年起售價格全記錄</h1>
-        <p class="subtitle" id="site-subtitle">為果粉整理的價格沿革與選購參考</p>
-        <p class="updated" id="site-updated">更新日期：2026-09-20</p>
+  <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span class="brand-copy">
+          <strong>iPhone Price Archive</strong>
+          <small>Design × Price × Time</small>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="開啟導覽" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#universe">Apple 宇宙</a>
+        <a href="#explorer">機型圖鑑</a>
+        <a href="#trend">價格走勢</a>
+        <a href="#milestones">重要節點</a>
+        <a href="#advice">選購指南</a>
       </div>
-      <div class="hero-illustration" aria-hidden="true">
-        <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#4f8cff" stop-opacity="0.55"/>
-              <stop offset="100%" stop-color="#4f8cff" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="210" cy="165" r="155" fill="url(#glow)"/>
-
-          <path d="M88 168 C 145 128 240 95 312 82" fill="none"
-                stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
-          <polygon points="312,76 324,82 314,90" fill="rgba(255,255,255,0.85)"/>
-
-          <!-- 2013 -->
-          <g>
-            <rect x="52" y="170" width="72" height="134" rx="12"
-                  fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.9)" stroke-width="2"/>
-            <rect x="59" y="181" width="58" height="106" rx="4" fill="rgba(255,255,255,0.16)"/>
-            <circle cx="88" cy="292" r="5" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
-            <text x="88" y="324" fill="rgba(255,255,255,0.9)" font-size="13" text-anchor="middle" font-weight="600">2013</text>
-          </g>
-
-          <!-- 2019 -->
-          <g>
-            <rect x="155" y="130" width="82" height="158" rx="14"
-                  fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.92)" stroke-width="2"/>
-            <rect x="163" y="142" width="66" height="130" rx="4" fill="rgba(255,255,255,0.18)"/>
-            <rect x="183" y="140" width="26" height="10" rx="5" fill="rgba(255,255,255,0.9)"/>
-            <text x="196" y="308" fill="rgba(255,255,255,0.9)" font-size="13" text-anchor="middle" font-weight="600">2019</text>
-          </g>
-
-          <!-- 2026 -->
-          <g>
-            <rect x="272" y="82" width="96" height="190" rx="18"
-                  fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.95)" stroke-width="2"/>
-            <rect x="281" y="94" width="78" height="162" rx="5" fill="rgba(255,255,255,0.2)"/>
-            <rect x="304" y="92" width="32" height="10" rx="5" fill="rgba(255,255,255,0.9)"/>
-            <text x="320" y="292" fill="rgba(255,255,255,0.9)" font-size="13" text-anchor="middle" font-weight="600">2026</text>
-          </g>
-        </svg>
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切換亮色／暗色模式">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <a class="nav-cta" href="#explorer">開始探索</a>
       </div>
     </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-kicker reveal">
+          <span class="live-dot"></span>
+          2013–2026 · 14 YEARS OF iPHONE
+        </div>
+        <h1 id="site-title" class="reveal">每一代 iPhone，<br><span>價格與設計的進化史</span></h1>
+        <p class="subtitle reveal" id="site-subtitle">從 iPhone 5s 到摺疊 iPhone Duo，收藏每年首發價格、代表機型與產品設計的關鍵轉折。</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#explorer">進入機型圖鑑</a>
+          <button class="button button-ghost" id="hero-compare" type="button">隨機比一比</button>
+          <a class="button button-quiet" href="#trend">查看價格走勢</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span id="site-updated">更新日期：2026-09-20</span>
+          <span class="meta-dot"></span>
+          <span>14 年 · 50 款代表機型</span>
+          <span class="meta-dot"></span>
+          <span>資料每日由 GitHub 自動監測</span>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" aria-label="Apple 產品視覺展示">
+        <div class="stage-orbit orbit-one" aria-hidden="true"></div>
+        <div class="stage-orbit orbit-two" aria-hidden="true"></div>
+        <figure class="stage-card stage-card-main">
+          <img src="assets/iphone-17-family.jpg" alt="iPhone 17、iPhone Air、iPhone 17 Pro 與 iPhone 17 Pro Max 產品合照">
+          <figcaption>
+            <span>2025 / 2026 LINEUP</span>
+            <strong>Thin. Bold. Foldable.</strong>
+          </figcaption>
+        </figure>
+        <figure class="stage-card stage-card-vision">
+          <img src="assets/apple-vision-pro.jpg" alt="Apple Vision Pro 空間運算裝置">
+          <figcaption>Apple Vision Pro</figcaption>
+        </figure>
+        <figure class="stage-card stage-card-watch">
+          <img src="assets/apple-watch.png" alt="Apple Watch Series 10">
+          <figcaption>Apple Watch</figcaption>
+        </figure>
+        <div class="stage-chip"><span>1999</span><small>iPhone Duo USD</small></div>
+      </div>
+    </div>
+    <a class="hero-scroll" href="#universe" aria-label="向下捲動">
+      <span></span>
+    </a>
   </header>
 
-  <main class="wrap">
-
-    <!-- 統計摘要 -->
-    <section class="stats" aria-label="統計摘要">
-      <div class="stat"><div class="label">涵蓋年份</div><div class="value" id="stat-span">2013–2026</div></div>
-      <div class="stat"><div class="label">入門款最低起售</div><div class="value" id="stat-lowest">$399</div></div>
-      <div class="stat"><div class="label">入門款最高起售</div><div class="value" id="stat-highest">$799</div></div>
-      <div class="stat"><div class="label">最新入門起售</div><div class="value" id="stat-now">$699</div></div>
+  <main id="main">
+    <section class="stats-wrap wrap" aria-label="統計摘要">
+      <div class="stats">
+        <article class="stat reveal">
+          <span class="stat-icon">◷</span>
+          <div><small>涵蓋年份</small><strong id="stat-span">2013–2026</strong></div>
+        </article>
+        <article class="stat reveal">
+          <span class="stat-icon">↓</span>
+          <div><small>入門款最低起售</small><strong id="stat-lowest">$399</strong></div>
+        </article>
+        <article class="stat reveal">
+          <span class="stat-icon">↑</span>
+          <div><small>入門款最高起售</small><strong id="stat-highest">$799</strong></div>
+        </article>
+        <article class="stat reveal">
+          <span class="stat-icon">◎</span>
+          <div><small>最新入門起售</small><strong id="stat-now">$699</strong></div>
+        </article>
+      </div>
     </section>
 
-    <!-- 價格表 -->
-    <section id="price-table">
-      <div class="section-head">
-        <span class="bar"></span>
-        <h2>歷年起售價格一覽</h2>
-        <span class="desc">以美國官網全款起售價（美元）為準，附國行人民幣參考</span>
+    <section class="wrap section" id="universe">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">THE APPLE UNIVERSE</span>
+          <h2>設計、人物與空間運算</h2>
+        </div>
+        <p>不只價格。從 Apple Park、iPhone、Watch 到 Vision Pro，理解每個產品如何形塑一代人的科技記憶。</p>
       </div>
-      <div class="card table-card">
+
+      <div class="universe-grid">
+        <article class="story-card story-card-wide reveal">
+          <img src="assets/apple-park.jpg" alt="Apple Park 航拍景觀" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">CUPERTINO</span>
+            <h3>Apple Park</h3>
+            <p>一座以無限循環為概念的總部，也象徵 Apple 對整合設計、能源與細節的執念。</p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <img src="assets/iphone-17-family.jpg" alt="iPhone 17 系列產品" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">PRODUCTS</span>
+            <h3>從單一 iPhone 到完整家族</h3>
+            <p>Pro、Plus、mini、e、Air 與 Duo，價格帶與使用情境持續分化。</p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <img src="assets/apple-vision-pro.jpg" alt="Apple Vision Pro 產品照片" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">SPATIAL</span>
+            <h3>Vision Pro</h3>
+            <p>Apple 將螢幕帶離手機邊界，重新定義空間運算與沉浸式內容。</p>
+          </div>
+        </article>
+
+        <article class="story-card story-card-portrait reveal">
+          <img src="assets/steve-jobs.jpg" alt="Steve Jobs 肖像" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">FOUNDER</span>
+            <h3>Steve Jobs</h3>
+            <p>以「站在科技與人文交會處」奠定 Apple 的產品哲學，也影響第一代 iPhone 的極簡方向。</p>
+          </div>
+        </article>
+
+        <article class="story-card story-card-portrait reveal">
+          <img src="assets/tim-cook.jpg" alt="Tim Cook 肖像" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">CEO</span>
+            <h3>Tim Cook</h3>
+            <p>在供應鏈、服務、Apple Silicon 與隱私治理上擴張生態系，推動 iPhone 進入成熟期。</p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <img src="assets/apple-watch.png" alt="Apple Watch Series 10" loading="lazy">
+          <div class="story-overlay"></div>
+          <div class="story-content">
+            <span class="story-tag">WEARABLE</span>
+            <h3>Apple Watch</h3>
+            <p>從配件走向健康與運動平台，是 iPhone 生態最重要的隨身節點之一。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="explorer">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">PRICE & DEVICE EXPLORER</span>
+          <h2>歷年 iPhone 機型圖鑑</h2>
+        </div>
+        <p>每台手機都以可辨識的 SVG 重繪：Home 鍵、瀏海、動態島、鏡頭排列與摺疊形態都能一眼區分。</p>
+      </div>
+
+      <div class="explorer-toolbar reveal">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="搜尋 iPhone、年份或價格…" autocomplete="off">
+        </label>
+        <label class="select-wrap">
+          <span>年份</span>
+          <select id="year-filter"><option value="all">全部年份</option></select>
+        </label>
+        <label class="select-wrap">
+          <span>排序</span>
+          <select id="sort-mode">
+            <option value="year-asc">年份：舊到新</option>
+            <option value="year-desc">年份：新到舊</option>
+            <option value="price-asc">價格：低到高</option>
+            <option value="price-desc">價格：高到低</option>
+          </select>
+        </label>
+        <div class="view-switch" role="group" aria-label="顯示模式">
+          <button class="view-button is-active" type="button" data-view="grid">圖鑑</button>
+          <button class="view-button" type="button" data-view="table">表格</button>
+        </div>
+      </div>
+
+      <div class="explorer-summary reveal">
+        <span id="result-count">顯示 50 款機型</span>
+        <button class="text-button" id="clear-filters" type="button">清除篩選</button>
+      </div>
+
+      <div class="iphone-grid" id="iphone-grid"></div>
+
+      <div class="table-card card is-hidden" id="table-view">
         <div class="table-scroll">
           <table>
             <thead>
@@ -96,52 +249,98 @@
       </div>
     </section>
 
-    <!-- 價格走勢 -->
-    <section id="trend">
-      <div class="section-head">
-        <span class="bar"></span>
-        <h2>起售價格走勢</h2>
-        <span class="desc">每年「最便宜新款」的美元起售價</span>
+    <section class="wrap section" id="trend">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">PRICE EVOLUTION</span>
+          <h2>起售價格走勢</h2>
+        </div>
+        <p>每年「最便宜新款」的美元起售價。將滑鼠移到節點上，可查看該年度資訊。</p>
       </div>
-      <div class="card chart-card">
-        <div id="trend-chart"></div>
+      <div class="card chart-card reveal">
+        <div class="chart-legend">
+          <span><i class="legend-dot"></i> 當年度入門款起售價</span>
+          <strong id="chart-delta">14 年價格變化</strong>
+        </div>
+        <div class="chart-stage">
+          <div id="trend-chart"></div>
+          <div class="chart-tooltip" id="chart-tooltip" hidden></div>
+        </div>
       </div>
     </section>
 
-    <!-- 重要節點 -->
-    <section id="milestones">
-      <div class="section-head">
-        <span class="bar"></span>
-        <h2>重要節點</h2>
-        <span class="desc">影響價格與產品線的關鍵時刻</span>
+    <section class="wrap section" id="milestones">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">KEY MOMENTS</span>
+          <h2>重要節點</h2>
+        </div>
+        <p>真正改變 iPhone 定位與價格結構的時刻。</p>
       </div>
-      <div class="card">
+      <div class="card timeline-card reveal">
         <ul class="timeline" id="milestone-list"></ul>
       </div>
     </section>
 
-    <!-- 選購建議 -->
-    <section id="advice">
-      <div class="section-head">
-        <span class="bar"></span>
-        <h2>選購建議</h2>
-        <span class="desc">依需求與預算，快速找到適合的 iPhone</span>
+    <section class="wrap section" id="advice">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">BUYING GUIDE</span>
+          <h2>選購建議</h2>
+        </div>
+        <p>用預算、尺寸、相機與使用情境，快速縮小選擇範圍。</p>
       </div>
       <div class="advice-grid" id="advice-grid"></div>
     </section>
 
-    <!-- 注意事項 -->
-    <section id="notice">
-      <div class="notice">
-        <strong>注意事項：</strong>價格以各年官方首發、最低容量配置的「全款零售價」為準（美元），人民幣為國行參考價；2013–2016 年美國市場曾以合約價宣傳，此處已換算為全款價以便比較。所有資料集中於 <code>data.js</code>，可直接編輯更新。
+    <section class="wrap section notice-section">
+      <div class="notice reveal">
+        <strong>資料方法：</strong>價格以各年 Apple 官方首發、最低容量配置的全款零售價為準；人民幣為中國大陸官網參考價。2013–2016 年美國市場曾以合約價宣傳，本網站統一換算為全款價。自動監測只會把官方確認的新機型寫入資料，既有歷史首發價不會被後續零售價或促銷價覆蓋。
       </div>
     </section>
   </main>
 
   <footer>
-    <div>iPhone 歷年起售價格全記錄 · 2013–2026</div>
-    <div>如需更新資料，請編輯 <a href="data.js" target="_blank">data.js</a>，或參考 <a href="編輯說明.md" target="_blank">編輯說明</a>。</div>
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"><i></i></span>
+          <span class="brand-copy"><strong>iPhone Price Archive</strong><small>Independent fan project</small></span>
+        </a>
+        <p>非 Apple 官方網站。產品名稱與商標屬 Apple Inc. 所有；影像授權與來源請見 <a href="CREDITS.md">CREDITS.md</a>。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#explorer">機型圖鑑</a>
+        <a href="#trend">價格走勢</a>
+        <a href="data.js">資料檔</a>
+        <a href="編輯說明.md">維護說明</a>
+        <a href="https://github.com/sssssses123-hue/iphone-price-summary" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
   </footer>
+
+  <div class="compare-tray" id="compare-tray" hidden>
+    <div class="compare-tray-inner">
+      <div>
+        <small>已選機型</small>
+        <div class="compare-chips" id="compare-chips"></div>
+      </div>
+      <div class="compare-actions">
+        <button class="text-button" id="compare-clear" type="button">清除</button>
+        <button class="button button-primary" id="compare-open" type="button">開始比較</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="detail-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="關閉">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="回到頂端">↑</button>
 
   <script src="data.js"></script>
   <script src="app.js"></script>

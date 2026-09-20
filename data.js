@@ -17,8 +17,9 @@
 // ============================================================
 
 window.SITE = {
-  title: "iPhone 歷年起售價格全記錄",
-  subtitle: "2013 – 2026 · 為果粉整理的價格沿革與選購參考",
+  title: "iPhone Price Archive · 2013–2026",
+  subtitle: "從 iPhone 5s 到摺疊 iPhone Duo，收藏每年首發價格、代表機型與產品設計的關鍵轉折。",
+  heroTitle: "每一代 iPhone，｜價格與設計的進化史",
   updated: "2026-09-20"
 };
 

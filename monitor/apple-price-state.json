@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "lastChangedAt": "2026-09-20T06:39:13.878Z",
+  "sources": {
+    "us": "https://www.apple.com/shop/buy-iphone",
+    "cn": "https://www.apple.com.cn/shop/buy-iphone"
+  },
+  "cards": {
+    "us": [
+      {
+        "title": "iPhone 16",
+        "eyebrow": "",
+        "price": 799,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone 16"
+        ]
+      },
+      {
+        "title": "iPhone 17",
+        "eyebrow": "",
+        "price": 899,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone 17"
+        ]
+      },
+      {
+        "title": "iPhone 17e",
+        "eyebrow": "",
+        "price": 699,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone 17e"
+        ]
+      },
+      {
+        "title": "iPhone 18 Pro & iPhone 18 Pro Max",
+        "eyebrow": "NEW",
+        "price": 1199,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone 18 Pro",
+          "iPhone 18 Pro Max"
+        ]
+      },
+      {
+        "title": "iPhone Air",
+        "eyebrow": "",
+        "price": 1099,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone Air"
+        ]
+      },
+      {
+        "title": "iPhone Duo",
+        "eyebrow": "PRE-ORDER 10.16",
+        "price": 1999,
+        "currency": "USD",
+        "modelNames": [
+          "iPhone Duo"
+        ]
+      }
+    ],
+    "cn": [
+      {
+        "title": "iPhone 16",
+        "eyebrow": "",
+        "price": 5999,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone 16"
+        ]
+      },
+      {
+        "title": "iPhone 17",
+        "eyebrow": "",
+        "price": 6799,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone 17"
+        ]
+      },
+      {
+        "title": "iPhone 17e",
+        "eyebrow": "",
+        "price": 5299,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone 17e"
+        ]
+      },
+      {
+        "title": "iPhone 18 Pro 和 iPhone 18 Pro Max",
+        "eyebrow": "新款",
+        "price": 9999,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone 18 Pro",
+          "iPhone 18 Pro Max"
+        ]
+      },
+      {
+        "title": "iPhone Air",
+        "eyebrow": "",
+        "price": 8799,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone Air"
+        ]
+      },
+      {
+        "title": "iPhone Duo",
+        "eyebrow": "10 月 16 日起接受预购",
+        "price": 15999,
+        "currency": "CNY",
+        "modelNames": [
+          "iPhone Duo"
+        ]
+      }
+    ]
+  },
+  "details": {
+    "us": {
+      "iPhone 16": {
+        "price": 829,
+        "gb": 128
+      },
+      "iPhone 17": {
+        "price": 929,
+        "gb": 256
+      },
+      "iPhone 17e": {
+        "price": 699,
+        "gb": 256
+      },
+      "iPhone 18 Pro": {
+        "price": 1199,
+        "gb": 256
+      },
+      "iPhone 18 Pro Max": {
+        "price": 1299,
+        "gb": 256
+      },
+      "iPhone Air": {
+        "price": 1099,
+        "gb": 256
+      },
+      "iPhone Duo": {
+        "price": 1999,
+        "gb": 256
+      }
+    },
+    "cn": {
+      "iPhone 16": {
+        "price": 5999,
+        "gb": 128
+      },
+      "iPhone 17": {
+        "price": 6799,
+        "gb": 256
+      },
+      "iPhone 17e": {
+        "price": 5299,
+        "gb": 256
+      },
+      "iPhone 18 Pro": {
+        "price": 9999,
+        "gb": 256
+      },
+      "iPhone 18 Pro Max": {
+        "price": 10999,
+        "gb": 256
+      },
+      "iPhone Air": {
+        "price": 8799,
+        "gb": 256
+      },
+      "iPhone Duo": {
+        "price": 15999,
+        "gb": 256
+      }
+    }
+  }
+}

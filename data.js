@@ -19,7 +19,7 @@
 window.SITE = {
   title: "iPhone 歷年起售價格全記錄",
   subtitle: "2013 – 2026 · 為果粉整理的價格沿革與選購參考",
-  updated: "2026-09-11"
+  updated: "2026-09-20"
 };
 
 window.IPHONE_DATA = [
@@ -111,7 +111,7 @@ window.IPHONE_DATA = [
       { name: "iPhone 13 Pro Max", usd: 1099, cny: 8999, gb: 128 }
     ],
     cheapestUsd: 699,
-    note: "標準款起售容量提升至 128GB，mini 與標準版售價較前代調降。"
+    note: "mini 與標準版起售容量提升至 128GB，售價與前代相同（等於變相降價）。"
   },
   {
     year: 2022,
@@ -162,12 +162,14 @@ window.IPHONE_DATA = [
   {
     year: 2026,
     models: [
-      { name: "iPhone 17e", usd: 599, cny: 4499, gb: 256 },
+      { name: "iPhone 17e", usd: 699, cny: 5299, gb: 256 },
+      { name: "iPhone Air", usd: 1099, cny: 8799, gb: 256 },
       { name: "iPhone 18 Pro", usd: 1199, cny: 9999, gb: 256 },
-      { name: "iPhone 18 Pro Max", usd: 1299, cny: 10999, gb: 256 }
+      { name: "iPhone 18 Pro Max", usd: 1299, cny: 10999, gb: 256 },
+      { name: "iPhone Duo", usd: 1999, cny: 15999, gb: 256 }
     ],
-    cheapestUsd: 599,
-    note: "標準版缺席，僅發佈 Pro 系列（A20 Pro、2nm 製程）；另有摺疊機 iPhone Duo。"
+    cheapestUsd: 699,
+    note: "推出首款摺疊 iPhone Duo（1999 美元起）；iPhone 18 僅保留 Pro 系列，17e、Air 與 Pro 起售價均較前代上調。"
   }
 ];
 
@@ -181,15 +183,16 @@ window.MILESTONES = [
   { year: "2022", title: "晶片分層", text: "Pro 與標準款規格差距拉大，選購需更留意定位。" },
   { year: "2023", title: "全系 USB-C", text: "告別 Lightning，充電與傳輸更通用。" },
   { year: "2025", title: "更薄、更親民", text: "iPhone Air 登場；16e 開啟 599 美元親民價格線。" },
-  { year: "2026", title: "只留 Pro 與摺疊", text: "標準版缺席，Pro 系列起售價漲至 1199 美元起。" }
+  { year: "2026", title: "摺疊機元年", text: "iPhone Duo 以 1999 美元起售登場；18 Pro 系列維持高階定位，產品線分層更明顯。" }
 ];
 
 // 選購建議
 window.ADVICE = [
-  { icon: "💰", title: "預算優先", text: "iPhone 17e／16e（599 美元、約 4499 元起）只要最新 A 系列晶片與 Apple Intelligence，且 256GB 起步，是預算有限者的首選。" },
+  { icon: "💰", title: "預算優先", text: "iPhone 17e／16e（699／599 美元、5299／4499 元起）具備最新 A 系列晶片與 Apple Intelligence，是預算有限者的首選。" },
   { icon: "⚖️", title: "均衡之選", text: "iPhone 17（799 美元、約 5999 元起）容量已升級至 256GB，價格不變，一般用戶最划算。" },
-  { icon: "🪶", title: "輕薄設計", text: "iPhone Air（999 美元）主打超薄機身與便攜性，適合重視手感的果粉。" },
-  { icon: "📷", title: "影像／效能", text: "iPhone 17 Pro／Pro Max 或 18 Pro 配備 Pro 相機系統與 ProMotion，適合攝影、遊戲與重度使用者。" },
+  { icon: "🪶", title: "輕薄設計", text: "iPhone Air 主打超薄機身與便攜性；2026 年式起售價為 1099 美元、8799 元起。" },
+  { icon: "📷", title: "影像／效能", text: "iPhone 18 Pro／Pro Max 或 iPhone 17 Pro 配備 Pro 相機系統與 ProMotion，適合攝影、遊戲與重度使用者。" },
+  { icon: "📖", title: "摺疊大螢幕", text: "iPhone Duo（1999 美元、15999 元起）是首款摺疊 iPhone，適合追求大螢幕與新型態體驗者。" },
   { icon: "📱", title: "小手機／經典", text: "偏好一手掌握的用戶可考慮舊款 13 mini 或 SE 系列；收藏取向則可留意歷代經典機。" },
   { icon: "🛒", title: "入手時機", text: "新機發表後舊款通常會降價；搭配教育優惠、節日促銷與以舊換新，通常能再省一筆。" },
   { icon: "💾", title: "容量提醒", text: "近年標準款容量逐步上調（128→256GB），同價位下優先挑容量較大的版本更耐用。" }

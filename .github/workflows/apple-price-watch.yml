@@ -1,0 +1,61 @@
+name: Apple iPhone Price Watch
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 02:23 UTC = 10:23 in Asia/Shanghai.
+    - cron: "23 2 * * *"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: apple-iphone-price-watch
+  cancel-in-progress: false
+
+jobs:
+  check-apple:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check Apple US and China store pages
+        run: node scripts/check-apple-prices.mjs
+
+      - name: Detect repository changes
+        id: changes
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit verified official changes
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.js monitor
+          git commit -m "chore: sync Apple iPhone lineup and prices"
+          git push
+
+      - name: Open a notification issue
+        if: steps.changes.outputs.changed == 'true' && hashFiles('monitor/latest-report.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          title="[Apple Price Watch] $(date -u +'%Y-%m-%d') Apple 官方價格／陣容更新"
+          gh issue create --title "$title" --body-file monitor/latest-report.md

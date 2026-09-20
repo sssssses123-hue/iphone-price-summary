@@ -2,7 +2,7 @@
 
 This is an independent, non-commercial Apple fan project. Apple product names and trademarks belong to Apple Inc. This project is not endorsed by Apple.
 
-All photographic assets are stored locally under `assets/` and were resized/compressed for web delivery. These resized versions are distributed under the same license as their original files. The SVG iPhone illustrations in `app.js` are original, code-generated diagrams intended to show recognizable design differences; they are not official Apple product renders.
+All photographic assets are stored locally under `assets/` and were resized/compressed for web delivery. These resized versions are distributed under the same license as their original files. The model cards use real product images downloaded from Wikipedia/Wikimedia model pages. They are not AI-generated. The machine-readable mapping and source page for every model is stored in `assets/device-images.json`.
 
 ## Photo sources
 
@@ -17,6 +17,7 @@ All photographic assets are stored locally under `assets/` and were resized/comp
 
 ## Technical assets
 
+- Device-card images use the corresponding Wikipedia/Wikimedia model-page product image through the MediaWiki pageimages API. The local filename and source page for every model are recorded in `assets/device-images.json`.
 - The Apple Park, Apple Watch and Vision Pro photos are used as editorial background/story imagery.
 - The iPhone 17 family photo is used in the hero and product-story sections.
 - Steve Jobs and Tim Cook portraits are used with attribution in the people/context section.

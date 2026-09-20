@@ -10,10 +10,10 @@ A static website for Apple fans that records the launch starting price of each i
 - "Cheapest new iPhone each year" trend chart (SVG, generated in the browser)
 - Key milestone timeline
 - Buying advice for different needs and budgets
-- Hand-crafted inline SVG illustration; no external image assets
+- Locally hosted real product and story imagery with traceable sources
 - Data / presentation separation: edit one data file to update the whole site
 - Interactive 50-model explorer with search, year filters, sorting, detail modals and side-by-side comparison
-- Device-specific SVG illustrations showing Home button, notch, Dynamic Island, camera layouts and foldable designs
+- Credited real product images for every iPhone model, with Plus/Max size variants and traceable source pages
 - Immersive Apple Park hero, product/people story wall and light/dark themes
 - Automated checks against Apple's official US and China store pages
 
@@ -34,7 +34,7 @@ The monitoring state is stored in monitor/apple-price-state.json; the latest not
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Page structure and hero illustration |
+| `index.html` | Page structure and hero layout |
 | `styles.css` | Colors, fonts and layout |
 | `data.js` | **All prices, text, milestones and advice (edit this)** |
 | `app.js` | Renders the interactive device explorer, charts, modals and comparison tools |
@@ -95,10 +95,10 @@ Free to use for personal reference.
 - 「每年最便宜新款」價格走勢圖（瀏覽器自動產生 SVG）
 - 重要節點時間軸
 - 依需求與預算的選購建議
-- 內建 SVG 插圖，不依賴外部圖片
+- 本機托管真實產品與故事圖片，來源可追溯
 - 資料與版面分離：改一個資料檔即可更新全站
 - 50 款互動式機型圖鑑：搜尋、年份篩選、排序、詳情彈窗與並排比較
-- 依各代外觀重繪 SVG：Home 鍵、瀏海、動態島、鏡頭排列與摺疊設計
+- 每款 iPhone 使用可追溯來源的真實產品圖，Plus／Max 以尺寸比例區分
 - 沉浸式 Apple Park 主視覺、產品／人物故事牆與亮暗主題
 - 每日自動檢查 Apple 美國與中國大陸官方商店頁面
 

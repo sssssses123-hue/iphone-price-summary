@@ -1,0 +1,469 @@
+{
+  "generatedAt": "2026-09-20T07:31:03.682Z",
+  "models": {
+    "iPhone 5c": {
+      "file": "iphone-5c.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_5c",
+      "resolvedPage": "IPhone 5c"
+    },
+    "iPhone 5s": {
+      "file": "iphone-5s.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_5s",
+      "resolvedPage": "IPhone 5s"
+    },
+    "iPhone 6": {
+      "file": "iphone-6.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6",
+      "resolvedPage": "IPhone 6"
+    },
+    "iPhone 6 Plus": {
+      "file": "iphone-6.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6",
+      "resolvedPage": "IPhone 6"
+    },
+    "iPhone 6s": {
+      "file": "iphone-6s.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6s",
+      "resolvedPage": "IPhone 6s"
+    },
+    "iPhone 6s Plus": {
+      "file": "iphone-6s.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6s",
+      "resolvedPage": "IPhone 6s"
+    },
+    "iPhone SE（第 1 代）": {
+      "file": "iphone-se-1st-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(1st_generation)",
+      "resolvedPage": "IPhone SE (1st generation)"
+    },
+    "iPhone 7": {
+      "file": "iphone-7.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_7",
+      "resolvedPage": "IPhone 7"
+    },
+    "iPhone 7 Plus": {
+      "file": "iphone-7.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_7",
+      "resolvedPage": "IPhone 7"
+    },
+    "iPhone 8": {
+      "file": "iphone-8.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_8",
+      "resolvedPage": "IPhone 8"
+    },
+    "iPhone 8 Plus": {
+      "file": "iphone-8.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_8",
+      "resolvedPage": "IPhone 8"
+    },
+    "iPhone X": {
+      "file": "iphone-x.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_X",
+      "resolvedPage": "IPhone X"
+    },
+    "iPhone XR": {
+      "file": "iphone-xr.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_XR",
+      "resolvedPage": "IPhone XR"
+    },
+    "iPhone XS": {
+      "file": "iphone-xs.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_XS",
+      "resolvedPage": "IPhone XS"
+    },
+    "iPhone XS Max": {
+      "file": "iphone-xs.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_XS",
+      "resolvedPage": "IPhone XS"
+    },
+    "iPhone 11": {
+      "file": "iphone-11.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_11",
+      "resolvedPage": "IPhone 11"
+    },
+    "iPhone 11 Pro": {
+      "file": "iphone-11-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_11_Pro",
+      "resolvedPage": "IPhone 11 Pro"
+    },
+    "iPhone 11 Pro Max": {
+      "file": "iphone-11-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_11_Pro",
+      "resolvedPage": "IPhone 11 Pro"
+    },
+    "iPhone SE（第 2 代）": {
+      "file": "iphone-se-2nd-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(2nd_generation)",
+      "resolvedPage": "IPhone SE (2nd generation)"
+    },
+    "iPhone 12 mini": {
+      "file": "iphone-12.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12",
+      "resolvedPage": "IPhone 12"
+    },
+    "iPhone 12": {
+      "file": "iphone-12.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12",
+      "resolvedPage": "IPhone 12"
+    },
+    "iPhone 12 Pro": {
+      "file": "iphone-12-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12_Pro",
+      "resolvedPage": "IPhone 12 Pro"
+    },
+    "iPhone 12 Pro Max": {
+      "file": "iphone-12-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12_Pro",
+      "resolvedPage": "IPhone 12 Pro"
+    },
+    "iPhone 13 mini": {
+      "file": "iphone-13.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13",
+      "resolvedPage": "IPhone 13"
+    },
+    "iPhone 13": {
+      "file": "iphone-13.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13",
+      "resolvedPage": "IPhone 13"
+    },
+    "iPhone 13 Pro": {
+      "file": "iphone-13-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13_Pro",
+      "resolvedPage": "IPhone 13 Pro"
+    },
+    "iPhone 13 Pro Max": {
+      "file": "iphone-13-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13_Pro",
+      "resolvedPage": "IPhone 13 Pro"
+    },
+    "iPhone SE（第 3 代）": {
+      "file": "iphone-se-3rd-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(3rd_generation)",
+      "resolvedPage": "IPhone SE (3rd generation)"
+    },
+    "iPhone 14": {
+      "file": "iphone-14.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14",
+      "resolvedPage": "IPhone 14"
+    },
+    "iPhone 14 Plus": {
+      "file": "iphone-14.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14",
+      "resolvedPage": "IPhone 14"
+    },
+    "iPhone 14 Pro": {
+      "file": "iphone-14-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14_Pro",
+      "resolvedPage": "IPhone 14 Pro"
+    },
+    "iPhone 14 Pro Max": {
+      "file": "iphone-14-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14_Pro",
+      "resolvedPage": "IPhone 14 Pro"
+    },
+    "iPhone 15": {
+      "file": "iphone-15.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15",
+      "resolvedPage": "IPhone 15"
+    },
+    "iPhone 15 Plus": {
+      "file": "iphone-15.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15",
+      "resolvedPage": "IPhone 15"
+    },
+    "iPhone 15 Pro": {
+      "file": "iphone-15-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15_Pro",
+      "resolvedPage": "IPhone 15 Pro"
+    },
+    "iPhone 15 Pro Max": {
+      "file": "iphone-15-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15_Pro",
+      "resolvedPage": "IPhone 15 Pro"
+    },
+    "iPhone 16": {
+      "file": "iphone-16.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16",
+      "resolvedPage": "IPhone 16"
+    },
+    "iPhone 16 Plus": {
+      "file": "iphone-16.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16",
+      "resolvedPage": "IPhone 16"
+    },
+    "iPhone 16 Pro": {
+      "file": "iphone-16-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16_Pro",
+      "resolvedPage": "IPhone 16 Pro"
+    },
+    "iPhone 16 Pro Max": {
+      "file": "iphone-16-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16_Pro",
+      "resolvedPage": "IPhone 16 Pro"
+    },
+    "iPhone 16e": {
+      "file": "iphone-16e.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16e",
+      "resolvedPage": "IPhone 16e"
+    },
+    "iPhone 17": {
+      "file": "iphone-17.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17",
+      "resolvedPage": "IPhone 17"
+    },
+    "iPhone Air": {
+      "file": "iphone-air.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_Air",
+      "resolvedPage": "IPhone Air"
+    },
+    "iPhone 17 Pro": {
+      "file": "iphone-17-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17_Pro",
+      "resolvedPage": "IPhone 17 Pro"
+    },
+    "iPhone 17 Pro Max": {
+      "file": "iphone-17-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17_Pro",
+      "resolvedPage": "IPhone 17 Pro"
+    },
+    "iPhone 17e": {
+      "file": "iphone-17e.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17e",
+      "resolvedPage": "IPhone 17e"
+    },
+    "iPhone 18 Pro": {
+      "file": "iphone-18-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_18_Pro",
+      "resolvedPage": "IPhone 18 Pro"
+    },
+    "iPhone 18 Pro Max": {
+      "file": "iphone-18-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_18_Pro",
+      "resolvedPage": "IPhone 18 Pro"
+    },
+    "iPhone Duo": {
+      "file": "iphone-duo.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_Duo",
+      "resolvedPage": "IPhone Duo"
+    }
+  },
+  "pages": {
+    "iPhone 5c": {
+      "resolvedTitle": "IPhone 5c",
+      "file": "iphone-5c.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_5c",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/97/IPhone_5C_%28blue%29.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IPhone_5C_%28blue%29.svg/1280px-IPhone_5C_%28blue%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 5s": {
+      "resolvedTitle": "IPhone 5s",
+      "file": "iphone-5s.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_5s",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d9/IPhone_5s_golden.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/IPhone_5s_golden.svg/1280px-IPhone_5s_golden.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 6": {
+      "resolvedTitle": "IPhone 6",
+      "file": "iphone-6.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0f/IPhone_6_Space_Gray.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/IPhone_6_Space_Gray.svg/1280px-IPhone_6_Space_Gray.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 6s": {
+      "resolvedTitle": "IPhone 6s",
+      "file": "iphone-6s.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_6s",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9b/IPhone_6s_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/IPhone_6s_vector.svg/1280px-IPhone_6s_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone SE (1st generation)": {
+      "resolvedTitle": "IPhone SE (1st generation)",
+      "file": "iphone-se-1st-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(1st_generation)",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c9/IPhone_SE_in_silver.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/c/c9/IPhone_SE_in_silver.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "iPhone 7": {
+      "resolvedTitle": "IPhone 7",
+      "file": "iphone-7.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_7",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/18/IPhone_7_Jet_Black.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/IPhone_7_Jet_Black.svg/1280px-IPhone_7_Jet_Black.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 8": {
+      "resolvedTitle": "IPhone 8",
+      "file": "iphone-8.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_8",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5d/IPhone_8_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/IPhone_8_vector.svg/1280px-IPhone_8_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone X": {
+      "resolvedTitle": "IPhone X",
+      "file": "iphone-x.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_X",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/32/IPhone_X_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/1280px-IPhone_X_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone XR": {
+      "resolvedTitle": "IPhone XR",
+      "file": "iphone-xr.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_XR",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e9/IPhone_XR_Blue.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/IPhone_XR_Blue.svg/1280px-IPhone_XR_Blue.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone XS": {
+      "resolvedTitle": "IPhone XS",
+      "file": "iphone-xs.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_XS",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/06/IPhone_XS_Gold.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/IPhone_XS_Gold.svg/1280px-IPhone_XS_Gold.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 11": {
+      "resolvedTitle": "IPhone 11",
+      "file": "iphone-11.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_11",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/39/IPhone_11_Green.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/IPhone_11_Green.svg/1280px-IPhone_11_Green.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 11 Pro": {
+      "resolvedTitle": "IPhone 11 Pro",
+      "file": "iphone-11-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_11_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/94/IPhone_11_Pro_Midnight_Green.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/IPhone_11_Pro_Midnight_Green.svg/1280px-IPhone_11_Pro_Midnight_Green.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone SE (2nd generation)": {
+      "resolvedTitle": "IPhone SE (2nd generation)",
+      "file": "iphone-se-2nd-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(2nd_generation)",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/IPhone_SE_%282nd_generation%29_white_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/IPhone_SE_%282nd_generation%29_white_vector.svg/1280px-IPhone_SE_%282nd_generation%29_white_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 12": {
+      "resolvedTitle": "IPhone 12",
+      "file": "iphone-12.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/34/IPhone_12_Blue.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/IPhone_12_Blue.svg/1280px-IPhone_12_Blue.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 12 Pro": {
+      "resolvedTitle": "IPhone 12 Pro",
+      "file": "iphone-12-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_12_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/IPhone_12_Pro_Gold.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/IPhone_12_Pro_Gold.svg/1280px-IPhone_12_Pro_Gold.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 13": {
+      "resolvedTitle": "IPhone 13",
+      "file": "iphone-13.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0c/IPhone_13_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/1280px-IPhone_13_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 13 Pro": {
+      "resolvedTitle": "IPhone 13 Pro",
+      "file": "iphone-13-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_13_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b5/IPhone_13_Pro_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/IPhone_13_Pro_vector.svg/1280px-IPhone_13_Pro_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone SE (3rd generation)": {
+      "resolvedTitle": "IPhone SE (3rd generation)",
+      "file": "iphone-se-3rd-generation.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_SE_(3rd_generation)",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/IPhone_SE_%282nd_generation%29_white_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/IPhone_SE_%282nd_generation%29_white_vector.svg/1280px-IPhone_SE_%282nd_generation%29_white_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 14": {
+      "resolvedTitle": "IPhone 14",
+      "file": "iphone-14.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/61/IPhone_14_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/IPhone_14_vector.svg/1280px-IPhone_14_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 14 Pro": {
+      "resolvedTitle": "IPhone 14 Pro",
+      "file": "iphone-14-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_14_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/IPhone_14_Pro_vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/IPhone_14_Pro_vector.svg/1280px-IPhone_14_Pro_vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 15": {
+      "resolvedTitle": "IPhone 15",
+      "file": "iphone-15.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/ee/IPhone_15_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/1280px-IPhone_15_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 15 Pro": {
+      "resolvedTitle": "IPhone 15 Pro",
+      "file": "iphone-15-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_15_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f5/IPhone_15_Pro_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_15_Pro_Vector.svg/1280px-IPhone_15_Pro_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 16": {
+      "resolvedTitle": "IPhone 16",
+      "file": "iphone-16.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/7c/IPhone_16_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/IPhone_16_Vector.svg/1280px-IPhone_16_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 16 Pro": {
+      "resolvedTitle": "IPhone 16 Pro",
+      "file": "iphone-16-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d2/IPhone_16_Pro_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/1280px-IPhone_16_Pro_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 16e": {
+      "resolvedTitle": "IPhone 16e",
+      "file": "iphone-16e.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_16e",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5d/IPhone_16e_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/IPhone_16e_Vector.svg/1280px-IPhone_16e_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 17": {
+      "resolvedTitle": "IPhone 17",
+      "file": "iphone-17.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/e6/IPhone_17_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/IPhone_17_Vector.svg/1280px-IPhone_17_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone Air": {
+      "resolvedTitle": "IPhone Air",
+      "file": "iphone-air.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_Air",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/20/IPhone_Air_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/IPhone_Air_Vector.svg/1280px-IPhone_Air_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 17 Pro": {
+      "resolvedTitle": "IPhone 17 Pro",
+      "file": "iphone-17-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f5/IPhone_17_Pro_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_17_Pro_Vector.svg/1280px-IPhone_17_Pro_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 17e": {
+      "resolvedTitle": "IPhone 17e",
+      "file": "iphone-17e.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_17e",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/90/IPhone_17e_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/IPhone_17e_Vector.svg/1280px-IPhone_17e_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone 18 Pro": {
+      "resolvedTitle": "IPhone 18 Pro",
+      "file": "iphone-18-pro.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_18_Pro",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6e/IPhone_18_Pro_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/IPhone_18_Pro_Vector.svg/1280px-IPhone_18_Pro_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "iPhone Duo": {
+      "resolvedTitle": "IPhone Duo",
+      "file": "iphone-duo.png",
+      "sourcePage": "https://en.wikipedia.org/wiki/IPhone_Duo",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/44/IPhone_Duo_Folded_Vector.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+      "thumbnail": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/IPhone_Duo_Folded_Vector.svg/1280px-IPhone_Duo_Folded_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    }
+  }
+}

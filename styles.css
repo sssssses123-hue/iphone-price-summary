@@ -202,8 +202,14 @@ button { color: inherit; }
 .card-year { font-size: 11px; color: var(--muted); letter-spacing: 1.4px; font-weight: 750; }
 .card-price { color: var(--accent-dark); font-weight: 800; font-variant-numeric: tabular-nums; }
 .device-visual { position: relative; z-index: 1; height: 245px; display: grid; place-items: center; margin: 2px 0 4px; }
-.device-svg { width: 100%; max-width: 225px; height: 100%; overflow: visible; filter: drop-shadow(0 23px 21px rgba(0,0,0,0.27)); transition: transform 0.45s var(--ease); }
-.iphone-card:hover .device-svg { transform: translateY(-4px) rotateX(2deg) scale(1.035); }
+.device-image-frame { position: relative; width: 100%; height: 100%; display: grid; place-items: center; }
+.device-image { --device-scale: 1; width: auto; height: 230px; max-height: 230px; object-fit: contain; filter: drop-shadow(0 22px 18px rgba(0,0,0,0.28)); transform: scale(var(--device-scale)); transition: transform 0.45s var(--ease); }
+.device-image.is-mini { --device-scale: 0.88; }
+.device-image.is-plus { --device-scale: 1.03; }
+.device-image.is-max { --device-scale: 1.06; }
+.device-image.is-fold { --device-scale: 0.95; }
+.iphone-card:hover .device-image { transform: translateY(-4px) scale(calc(var(--device-scale) * 1.03)); }
+.product-image-label { position: absolute; right: 4px; top: 2px; color: var(--muted-2); font-size: 8px; letter-spacing: 1.1px; text-transform: uppercase; }
 .card-title { position: relative; z-index: 2; margin: 0; font-size: 19px; line-height: 1.2; letter-spacing: -0.5px; }
 .card-subline { position: relative; z-index: 2; display: flex; align-items: baseline; gap: 7px; margin-top: 5px; }
 .card-subline strong { font-size: 17px; font-variant-numeric: tabular-nums; }
@@ -291,12 +297,14 @@ footer { border-top: 1px solid var(--line); padding: 40px 0 52px; color: var(--m
 .modal-close { position: absolute; right: 17px; top: 15px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); cursor: pointer; font-size: 21px; line-height: 1; }
 .modal-hero { display: grid; grid-template-columns: 250px 1fr; gap: 24px; align-items: center; }
 .modal-device { min-height: 280px; display: grid; place-items: center; border-radius: 20px; background: radial-gradient(circle at 70% 15%, var(--accent-soft), transparent 55%); border: 1px solid var(--line); }
-.modal-device .device-svg { max-width: 240px; height: 270px; }
+.modal-device .device-image { height: 250px; max-height: 250px; }
 .modal-kicker { color: var(--accent-dark); font-size: 10px; letter-spacing: 1.6px; font-weight: 800; }
 .modal-panel h2 { margin: 6px 0 8px; font-size: 31px; letter-spacing: -1px; }
 .modal-price { font-size: 22px; font-weight: 850; margin: 12px 0 3px; }
 .modal-cny { color: var(--muted); font-size: 13px; }
 .modal-note { color: var(--muted); font-size: 13.5px; margin: 18px 0 0; }
+.modal-source { color: var(--muted-2); font-size: 10px; margin: 12px 0 0; }
+.modal-source a { color: var(--accent-dark); text-decoration: none; }
 .modal-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
 .fact { padding: 12px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,0.03); }
 .fact small { display: block; color: var(--muted); font-size: 10px; }

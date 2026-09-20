@@ -49,169 +49,40 @@
   function setText(id, text) { var node = byId(id); if (node) node.textContent = text; }
   function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
 
-  var DEVICE_SPECS = {
-    "iPhone 5c": { camera: "single", top: "home", body: "#ff7ca8", body2: "#e65584", edge: "#ffc0d6", screen: "#b93362", accent: "#ff8bb0", radius: 11 },
-    "iPhone 5s": { camera: "single", top: "home", body: "#d8d8d8", body2: "#8b8d92", edge: "#f4f4f2", screen: "#426d95", accent: "#bfc7d2", radius: 11 },
-    "iPhone 6": { camera: "single", top: "home", body: "#a8a9ae", body2: "#65676d", edge: "#e0e1e3", screen: "#436f95", accent: "#aab3bf", radius: 15 },
-    "iPhone 6 Plus": { camera: "single", top: "home", body: "#a8a9ae", body2: "#65676d", edge: "#e0e1e3", screen: "#436f95", accent: "#aab3bf", radius: 15, tall: 1.06 },
-    "iPhone 6s": { camera: "single", top: "home", body: "#c7a47d", body2: "#8b684b", edge: "#f0d7b8", screen: "#8b6a8e", accent: "#d7b18d", radius: 15 },
-    "iPhone 6s Plus": { camera: "single", top: "home", body: "#c7a47d", body2: "#8b684b", edge: "#f0d7b8", screen: "#8b6a8e", accent: "#d7b18d", radius: 15, tall: 1.06 },
-    "iPhone SE（第 1 代）": { camera: "single", top: "home", body: "#d5d5d7", body2: "#9a9ba0", edge: "#f5f5f5", screen: "#4d789d", accent: "#bcc4ce", radius: 11 },
-    "iPhone 7": { camera: "single", top: "home", body: "#25262a", body2: "#050506", edge: "#72757d", screen: "#147da8", accent: "#4f5661", radius: 15 },
-    "iPhone 7 Plus": { camera: "dual", top: "home", body: "#25262a", body2: "#050506", edge: "#72757d", screen: "#147da8", accent: "#4f5661", radius: 15, tall: 1.06 },
-    "iPhone 8": { camera: "single", top: "home", body: "#d8c3a6", body2: "#9c7c5f", edge: "#f3e4d3", screen: "#bd9f78", accent: "#c9aa8a", radius: 15 },
-    "iPhone 8 Plus": { camera: "dual", top: "home", body: "#d8c3a6", body2: "#9c7c5f", edge: "#f3e4d3", screen: "#bd9f78", accent: "#c9aa8a", radius: 15, tall: 1.06 },
-    "iPhone X": { camera: "dual", top: "notch", body: "#d4d5d8", body2: "#8a8d94", edge: "#f5f5f7", screen: "#415f9b", accent: "#aab3c2", radius: 17 },
-    "iPhone XR": { camera: "single", top: "notch", body: "#4b8bd0", body2: "#1d4e87", edge: "#8ebbec", screen: "#31568c", accent: "#77a9e2", radius: 17 },
-    "iPhone XS": { camera: "dual", top: "notch", body: "#d3b487", body2: "#99784d", edge: "#f4dcb8", screen: "#6f567e", accent: "#d6bd94", radius: 17 },
-    "iPhone XS Max": { camera: "dual", top: "notch", body: "#d3b487", body2: "#99784d", edge: "#f4dcb8", screen: "#6f567e", accent: "#d6bd94", radius: 17, tall: 1.07 },
-    "iPhone 11": { camera: "dual-square", top: "notch", body: "#e9e4f3", body2: "#b8aed0", edge: "#f8f6ff", screen: "#6b57a5", accent: "#b7a9e3", radius: 18 },
-    "iPhone 11 Pro": { camera: "triple-square", top: "notch", body: "#5c6760", body2: "#303a34", edge: "#9aa59d", screen: "#416a62", accent: "#82968b", radius: 18 },
-    "iPhone 11 Pro Max": { camera: "triple-square", top: "notch", body: "#5c6760", body2: "#303a34", edge: "#9aa59d", screen: "#416a62", accent: "#82968b", radius: 18, tall: 1.07 },
-    "iPhone SE（第 2 代）": { camera: "single", top: "home", body: "#1e1f24", body2: "#090a0d", edge: "#6f7178", screen: "#4a6e99", accent: "#6d747f", radius: 11 },
-    "iPhone 12 mini": { camera: "dual-square", top: "notch", body: "#4f73c5", body2: "#263b76", edge: "#90afed", screen: "#3155a2", accent: "#7d9ce0", radius: 14, narrow: true },
-    "iPhone 12": { camera: "dual-square", top: "notch", body: "#4f73c5", body2: "#263b76", edge: "#90afed", screen: "#3155a2", accent: "#7d9ce0", radius: 14 },
-    "iPhone 12 Pro": { camera: "triple-square", top: "notch", body: "#6d7079", body2: "#34363d", edge: "#b1b4bc", screen: "#4a5160", accent: "#9196a1", radius: 14 },
-    "iPhone 12 Pro Max": { camera: "triple-square", top: "notch", body: "#6d7079", body2: "#34363d", edge: "#b1b4bc", screen: "#4a5160", accent: "#9196a1", radius: 14, tall: 1.07 },
-    "iPhone 13 mini": { camera: "dual-diagonal", top: "notch", body: "#f0a6bd", body2: "#b65d7b", edge: "#ffd0de", screen: "#a54872", accent: "#f2a7bd", radius: 14, narrow: true },
-    "iPhone 13": { camera: "dual-diagonal", top: "notch", body: "#f0a6bd", body2: "#b65d7b", edge: "#ffd0de", screen: "#a54872", accent: "#f2a7bd", radius: 14 },
-    "iPhone 13 Pro": { camera: "triple-square", top: "notch", body: "#8db7d4", body2: "#476f91", edge: "#c7e1f1", screen: "#486d92", accent: "#8fb8d6", radius: 14 },
-    "iPhone 13 Pro Max": { camera: "triple-square", top: "notch", body: "#8db7d4", body2: "#476f91", edge: "#c7e1f1", screen: "#486d92", accent: "#8fb8d6", radius: 14, tall: 1.07 },
-    "iPhone SE（第 3 代）": { camera: "single", top: "home", body: "#1f2024", body2: "#08090c", edge: "#72747b", screen: "#4b6e95", accent: "#6d747f", radius: 11 },
-    "iPhone 14": { camera: "dual-diagonal", top: "notch", body: "#6f9dd4", body2: "#345e98", edge: "#a7c8ee", screen: "#365c90", accent: "#8aafe0", radius: 14 },
-    "iPhone 14 Plus": { camera: "dual-diagonal", top: "notch", body: "#6f9dd4", body2: "#345e98", edge: "#a7c8ee", screen: "#365c90", accent: "#8aafe0", radius: 14, tall: 1.07 },
-    "iPhone 14 Pro": { camera: "triple-square", top: "island", body: "#794982", body2: "#3e2046", edge: "#b78bc2", screen: "#713877", accent: "#a967b4", radius: 14 },
-    "iPhone 14 Pro Max": { camera: "triple-square", top: "island", body: "#794982", body2: "#3e2046", edge: "#b78bc2", screen: "#713877", accent: "#a967b4", radius: 14, tall: 1.07 },
-    "iPhone 15": { camera: "dual-diagonal", top: "island", body: "#9dc9dc", body2: "#5796b1", edge: "#cce9f3", screen: "#4e91ad", accent: "#acd5e3", radius: 14 },
-    "iPhone 15 Plus": { camera: "dual-diagonal", top: "island", body: "#9dc9dc", body2: "#5796b1", edge: "#cce9f3", screen: "#4e91ad", accent: "#acd5e3", radius: 14, tall: 1.07 },
-    "iPhone 15 Pro": { camera: "triple-square", top: "island", body: "#a59d92", body2: "#6c6258", edge: "#d8d0c6", screen: "#6e766f", accent: "#b8b0a5", radius: 14 },
-    "iPhone 15 Pro Max": { camera: "triple-square", top: "island", body: "#a59d92", body2: "#6c6258", edge: "#d8d0c6", screen: "#6e766f", accent: "#b8b0a5", radius: 14, tall: 1.07 },
-    "iPhone 16": { camera: "dual-vertical", top: "island", body: "#4a69b1", body2: "#1f3477", edge: "#8ba5e4", screen: "#3157a8", accent: "#7799e8", radius: 14 },
-    "iPhone 16 Plus": { camera: "dual-vertical", top: "island", body: "#4a69b1", body2: "#1f3477", edge: "#8ba5e4", screen: "#3157a8", accent: "#7799e8", radius: 14, tall: 1.07 },
-    "iPhone 16 Pro": { camera: "triple-square", top: "island", body: "#c7aa87", body2: "#8b6640", edge: "#e7d2b7", screen: "#8a6a53", accent: "#d7b994", radius: 14 },
-    "iPhone 16 Pro Max": { camera: "triple-square", top: "island", body: "#c7aa87", body2: "#8b6640", edge: "#e7d2b7", screen: "#8a6a53", accent: "#d7b994", radius: 14, tall: 1.07 },
-    "iPhone 16e": { camera: "single", top: "notch", body: "#eceef2", body2: "#a6adb8", edge: "#ffffff", screen: "#657083", accent: "#c1c7d0", radius: 14 },
-    "iPhone 17": { camera: "dual-vertical", top: "island", body: "#9eb9ea", body2: "#5877bd", edge: "#d1e0ff", screen: "#5476c3", accent: "#9fc0ff", radius: 14 },
-    "iPhone Air": { camera: "air", top: "island", body: "#bfe0f2", body2: "#72a8c5", edge: "#e6f6ff", screen: "#4f91b2", accent: "#a8d9ee", radius: 13, slim: true, bodyYear2026: "#e6c68e", body2Year2026: "#af8140" },
-    "iPhone 17 Pro": { camera: "pro-plateau", top: "island", body: "#e27b45", body2: "#8d3e1d", edge: "#ffc09c", screen: "#a84a27", accent: "#f39a62", radius: 13 },
-    "iPhone 17 Pro Max": { camera: "pro-plateau", top: "island", body: "#e27b45", body2: "#8d3e1d", edge: "#ffc09c", screen: "#a84a27", accent: "#f39a62", radius: 13, tall: 1.07 },
-    "iPhone 17e": { camera: "single", top: "notch", body: "#f0b3cb", body2: "#b95783", edge: "#ffd8e6", screen: "#a54e78", accent: "#f2a8c5", radius: 14 },
-    "iPhone 18 Pro": { camera: "pro-plateau", top: "island", body: "#7f2635", body2: "#3d0d17", edge: "#b75868", screen: "#6d1f2d", accent: "#a84254", radius: 13 },
-    "iPhone 18 Pro Max": { camera: "pro-plateau", top: "island", body: "#7f2635", body2: "#3d0d17", edge: "#b75868", screen: "#6d1f2d", accent: "#a84254", radius: 13, tall: 1.07 },
-    "iPhone Duo": { camera: "fold", top: "none", body: "#e9edf5", body2: "#8c96a8", edge: "#ffffff", screen: "#51678f", accent: "#b8c6de", radius: 15 }
+  var DEVICE_IMAGES = window.DEVICE_IMAGES || {};
+  var DEVICE_IMAGE_SOURCES = window.DEVICE_IMAGE_SOURCES || {};
+  var ACCENT_BY_MODEL = {
+    "iPhone 5c": "#ff7ca8", "iPhone 5s": "#e7c98b", "iPhone 6": "#a8a9ae", "iPhone 6s": "#c7a47d",
+    "iPhone SE（第 1 代）": "#d5d5d7", "iPhone 7": "#4d515a", "iPhone 8": "#d8c3a6", "iPhone X": "#c8cbd2",
+    "iPhone XR": "#4b8bd0", "iPhone XS": "#d3b487", "iPhone 11": "#b9a6e8", "iPhone 11 Pro": "#6d8276",
+    "iPhone SE（第 2 代）": "#353942", "iPhone 12": "#4f73c5", "iPhone 12 Pro": "#8392a8",
+    "iPhone 13": "#f0a6bd", "iPhone 13 Pro": "#8db7d4", "iPhone SE（第 3 代）": "#353942",
+    "iPhone 14": "#6f9dd4", "iPhone 14 Pro": "#a568b3", "iPhone 15": "#9dc9dc", "iPhone 15 Pro": "#b8b0a5",
+    "iPhone 16": "#4a69b1", "iPhone 16 Pro": "#d7b994", "iPhone 16e": "#c1c7d0", "iPhone 17": "#7da4ea",
+    "iPhone Air": "#a8d9ee", "iPhone 17 Pro": "#f39a62", "iPhone 17e": "#f2a8c5", "iPhone 18 Pro": "#a84254",
+    "iPhone Duo": "#b8c6de"
   };
 
-  function getDeviceSpec(name, year) {
-    var spec = Object.assign({
-      camera: "single", top: "home", body: "#80858e", body2: "#3f434a", edge: "#c4c8cf",
-      screen: "#416a95", accent: "#8da5bc", radius: 14, narrow: false, slim: false, tall: 1
-    }, DEVICE_SPECS[name] || {});
-
-    if (name === "iPhone Air" && year === 2026) {
-      spec.body = spec.bodyYear2026;
-      spec.body2 = spec.body2Year2026;
-      spec.edge = "#f4dfb9";
-      spec.screen = "#b8863c";
-      spec.accent = "#e4bd78";
-    }
-    if (/Pro Max|Plus|XS Max/.test(name)) spec.tall = Math.max(spec.tall, 1.07);
-    if (/mini/.test(name)) spec.narrow = true;
-    return spec;
+  function getAccent(name, year) {
+    if (name === "iPhone Air" && year === 2026) return "#e4bd78";
+    return ACCENT_BY_MODEL[name] || "#7da4ea";
   }
 
-  function renderCamera(spec, id) {
-    if (spec.camera === "fold") return "";
-    var camera = "";
-    if (spec.camera === "air") {
-      camera = '<rect x="148" y="31" width="53" height="22" rx="11" fill="rgba(10,14,24,0.78)" stroke="rgba(255,255,255,0.2)"/><circle cx="161" cy="42" r="7.5" fill="url(#lens-' + id + ')"/><circle cx="161" cy="42" r="3" fill="#101827"/>';
-    } else if (spec.camera === "pro-plateau") {
-      camera = '<rect x="144" y="29" width="60" height="27" rx="14" fill="rgba(8,12,20,0.9)" stroke="rgba(255,255,255,0.18)"/>' +
-        '<circle cx="155" cy="42" r="7" fill="url(#lens-' + id + ')"/><circle cx="170" cy="42" r="7" fill="url(#lens-' + id + ')"/><circle cx="185" cy="42" r="7" fill="url(#lens-' + id + ')"/><circle cx="195" cy="36" r="2.8" fill="#f8e4a5"/>';
-    } else if (spec.camera === "triple-square") {
-      camera = '<rect x="145" y="28" width="42" height="42" rx="12" fill="rgba(8,12,20,0.86)" stroke="rgba(255,255,255,0.15)"/>' +
-        '<circle cx="156" cy="39" r="7" fill="url(#lens-' + id + ')"/><circle cx="176" cy="39" r="7" fill="url(#lens-' + id + ')"/><circle cx="166" cy="57" r="7" fill="url(#lens-' + id + ')"/><circle cx="181" cy="57" r="2.6" fill="#f8e4a5"/>';
-    } else if (spec.camera === "dual-square" || spec.camera === "dual-diagonal" || spec.camera === "dual-vertical") {
-      var firstX = spec.camera === "dual-diagonal" ? 153 : 156;
-      var secondX = spec.camera === "dual-diagonal" ? 174 : 156;
-      var firstY = spec.camera === "dual-diagonal" ? 38 : 39;
-      var secondY = spec.camera === "dual-diagonal" ? 57 : 59;
-      camera = '<rect x="145" y="28" width="42" height="42" rx="12" fill="rgba(8,12,20,0.86)" stroke="rgba(255,255,255,0.15)"/>' +
-        '<circle cx="' + firstX + '" cy="' + firstY + '" r="7" fill="url(#lens-' + id + ')"/><circle cx="' + secondX + '" cy="' + secondY + '" r="7" fill="url(#lens-' + id + ')"/><circle cx="181" cy="57" r="2.5" fill="#f8e4a5"/>';
-    } else if (spec.camera === "dual") {
-      camera = '<rect x="151" y="30" width="27" height="42" rx="10" fill="rgba(8,12,20,0.86)" stroke="rgba(255,255,255,0.15)"/>' +
-        '<circle cx="164.5" cy="43" r="7" fill="url(#lens-' + id + ')"/><circle cx="164.5" cy="60" r="7" fill="url(#lens-' + id + ')"/>';
-    } else {
-      camera = '<rect x="149" y="30" width="31" height="31" rx="10" fill="rgba(8,12,20,0.82)" stroke="rgba(255,255,255,0.15)"/><circle cx="164.5" cy="45.5" r="9" fill="url(#lens-' + id + ')"/>';
-    }
-    return camera;
+  function getDeviceSizeClass(name) {
+    if (/mini/.test(name)) return "is-mini";
+    if (/Plus/.test(name)) return "is-plus";
+    if (/Max/.test(name)) return "is-max";
+    if (/Duo/.test(name)) return "is-fold";
+    return "is-standard";
   }
 
-  function renderFoldable(spec, id) {
-    return '<g transform="translate(34 13)">' +
-      '<rect x="0" y="0" width="162" height="202" rx="17" fill="url(#body-' + id + ')" stroke="' + spec.edge + '" stroke-width="1.4"/>' +
-      '<rect x="78" y="4" width="6" height="194" rx="3" fill="rgba(2,5,10,0.55)"/>' +
-      '<rect x="8" y="8" width="66" height="186" rx="9" fill="url(#screen-' + id + ')"/>' +
-      '<rect x="82" y="8" width="72" height="186" rx="9" fill="url(#screen-' + id + ')"/>' +
-      '<circle cx="41" cy="63" r="22" fill="rgba(255,255,255,0.13)"/><circle cx="119" cy="124" r="31" fill="rgba(255,255,255,0.09)"/>' +
-      '<rect x="92" y="18" width="29" height="7" rx="3.5" fill="rgba(5,9,16,0.72)"/>' +
-      '<circle cx="156" cy="31" r="4" fill="#1a2230" stroke="rgba(255,255,255,0.26)"/>' +
-      '<path d="M14 58 C 35 39 62 38 74 52" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round"/>' +
-      '<path d="M90 138 C 114 119 139 121 154 137" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round"/>' +
-      '</g>';
-  }
-
-  function renderDeviceSvg(record) {
-    var spec = getDeviceSpec(record.name, record.year);
-    var id = slug(record.id + "-device");
-    var width = spec.narrow ? 70 : 78;
-    var height = 202 * (spec.tall || 1) * (spec.slim ? 0.96 : 1);
-    var xFront = 28;
-    var xBack = 134;
-    var y = 16;
-    var frontTop = spec.top;
-    var screenGradient = 'screen-' + id;
-    var bodyGradient = 'body-' + id;
-    var lensGradient = 'lens-' + id;
-
-    var frontTopMarkup = "";
-    if (frontTop === "home") {
-      frontTopMarkup = '<circle cx="' + (xFront + width / 2) + '" cy="' + (y + height - 18) + '" r="6.5" fill="none" stroke="rgba(255,255,255,0.66)" stroke-width="1.3"/><rect x="' + (xFront + width / 2 - 3) + '" y="' + (y + height - 20.5) + '" width="6" height="6" rx="1.5" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="0.8"/>';
-    } else if (frontTop === "notch") {
-      frontTopMarkup = '<rect x="' + (xFront + width / 2 - 15) + '" y="' + (y + 5) + '" width="30" height="7" rx="3.5" fill="rgba(5,8,14,0.9)"/>';
-    } else if (frontTop === "island") {
-      frontTopMarkup = '<rect x="' + (xFront + width / 2 - 11) + '" y="' + (y + 5) + '" width="22" height="6.5" rx="3.25" fill="rgba(5,8,14,0.88)"/><circle cx="' + (xFront + width / 2 + 8) + '" cy="' + (y + 8.2) + '" r="1.5" fill="#4a7fd4"/>';
-    }
-
-    var screenHeight = frontTop === "home" ? height - 49 : height - 10;
-    var screenY = y + (frontTop === "home" ? 5 : 5);
-    var screenInset = 5;
-    var bodyFill = 'url(#' + bodyGradient + ')';
-
-    return '<svg class="device-svg" viewBox="0 0 240 240" role="img" aria-label="' + escapeHtml(record.name + ' 外觀示意圖') + '">' +
-      '<defs>' +
-      '<linearGradient id="' + bodyGradient + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + spec.edge + '"/><stop offset="0.25" stop-color="' + spec.body + '"/><stop offset="1" stop-color="' + spec.body2 + '"/></linearGradient>' +
-      '<linearGradient id="' + screenGradient + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + spec.accent + '"/><stop offset="1" stop-color="' + spec.screen + '"/></linearGradient>' +
-      '<radialGradient id="' + lensGradient + '"><stop offset="0" stop-color="#8bdcff"/><stop offset="0.32" stop-color="#244b80"/><stop offset="1" stop-color="#050812"/></radialGradient>' +
-      '</defs>' +
-      '<ellipse cx="120" cy="225" rx="83" ry="8" fill="rgba(0,0,0,0.2)"/>' +
-      (spec.camera === "fold" ? renderFoldable(spec, id) :
-        '<g>' +
-          '<rect x="' + xFront + '" y="' + y + '" width="' + width + '" height="' + height + '" rx="' + spec.radius + '" fill="' + bodyFill + '" stroke="' + spec.edge + '" stroke-width="1.4"/>' +
-          '<rect x="' + (xFront + screenInset) + '" y="' + screenY + '" width="' + (width - screenInset * 2) + '" height="' + (height - 10) + '" rx="' + Math.max(6, spec.radius - 4) + '" fill="url(#' + screenGradient + ')" stroke="rgba(255,255,255,0.23)" stroke-width="0.8"/>' +
-          '<circle cx="' + (xFront + 19) + '" cy="' + (y + 56) + '" r="18" fill="rgba(255,255,255,0.11)"/><circle cx="' + (xFront + width - 20) + '" cy="' + (y + 122) + '" r="24" fill="rgba(255,255,255,0.08)"/>' +
-          '<path d="M' + (xFront + 10) + ' ' + (y + 78) + ' C' + (xFront + 32) + ' ' + (y + 56) + ' ' + (xFront + 48) + ' ' + (y + 63) + ' ' + (xFront + 61) + ' ' + (y + 88) + '" fill="none" stroke="rgba(255,255,255,0.42)" stroke-width="2.2" stroke-linecap="round"/>' +
-          frontTopMarkup +
-          '<rect x="' + (xFront - 2) + '" y="' + (y + 50) + '" width="2" height="21" rx="1" fill="' + spec.edge + '"/><rect x="' + (xFront - 2) + '" y="' + (y + 82) + '" width="2" height="30" rx="1" fill="' + spec.edge + '"/>' +
-        '</g>' +
-        '<g>' +
-          '<rect x="' + xBack + '" y="' + y + '" width="' + width + '" height="' + height + '" rx="' + spec.radius + '" fill="' + bodyFill + '" stroke="' + spec.edge + '" stroke-width="1.4"/>' +
-          '<rect x="' + (xBack + 9) + '" y="' + (y + 14) + '" width="' + (width - 18) + '" height="' + (height - 28) + '" rx="' + Math.max(7, spec.radius - 4) + '" fill="rgba(255,255,255,0.045)" stroke="rgba(255,255,255,0.08)"/>' +
-          '<path d="M' + (xBack + 15) + ' ' + (y + 102) + ' C' + (xBack + 25) + ' ' + (y + 70) + ' ' + (xBack + 55) + ' ' + (y + 52) + ' ' + (xBack + 66) + ' ' + (y + 28) + '" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/>' +
-          renderCamera(spec, id) +
-          '<circle cx="' + (xBack + width / 2) + '" cy="' + (y + height * 0.57) + '" r="8" fill="rgba(255,255,255,0.12)"/>' +
-        '</g>'
-      ) +
-      '</svg>';
+  function renderDeviceImage(record) {
+    var src = DEVICE_IMAGES[record.name] || "assets/iphone-17-family.jpg";
+    var sizeClass = getDeviceSizeClass(record.name);
+    return '<figure class="device-image-frame">' +
+      '<span class="product-image-label">Product image</span>' +
+      '<img class="device-image ' + sizeClass + '" src="' + escapeHtml(src) + '" alt="' + escapeHtml(record.name + " 真實產品圖") + '" loading="lazy" decoding="async">' +
+      '</figure>';
   }
   function renderMeta() {
     document.title = SITE.title || "iPhone Price Archive";
@@ -268,10 +139,10 @@
 
     grid.innerHTML = rows.map(function (item) {
       var selected = state.compare.indexOf(item.id) >= 0;
-      var accent = getDeviceSpec(item.name, item.year).accent;
+      var accent = getAccent(item.name, item.year);
       return '<article class="iphone-card' + (selected ? " is-selected" : "") + '" data-id="' + item.id + '" tabindex="0" style="--card-accent:' + accent + '66">' +
         '<div class="card-topline"><span class="card-year">' + item.year + '</span><span class="card-price">' + usd(item.usd) + '</span></div>' +
-        '<div class="device-visual">' + renderDeviceSvg(item) + '</div>' +
+        '<div class="device-visual">' + renderDeviceImage(item) + '</div>' +
         '<h3 class="card-title">' + escapeHtml(item.name) + '</h3>' +
         '<div class="card-subline"><strong>' + usd(item.usd) + '</strong><span>' + cny(item.cny) + ' · ' + item.gb + 'GB</span></div>' +
         '<p class="card-note">' + escapeHtml(item.note) + '</p>' +
@@ -321,11 +192,10 @@
     var modal = byId("detail-modal");
     var content = byId("modal-content");
     if (!item || !modal || !content) return;
-    var spec = getDeviceSpec(item.name, item.year);
 
     content.innerHTML =
       '<div class="modal-hero">' +
-        '<div class="modal-device">' + renderDeviceSvg(item) + '</div>' +
+        '<div class="modal-device">' + renderDeviceImage(item) + '</div>' +
         '<div><span class="modal-kicker">' + item.year + ' · LAUNCH PRICE</span>' +
         '<h2 id="modal-title">' + escapeHtml(item.name) + '</h2>' +
         '<div class="modal-price">' + usd(item.usd) + '</div>' +
@@ -335,6 +205,8 @@
           '<div class="fact"><small>美國首發</small><strong>' + usd(item.usd) + '</strong></div>' +
           '<div class="fact"><small>中國大陸首發</small><strong>' + cny(item.cny) + '</strong></div>' +
           '<div class="fact"><small>起始容量</small><strong>' + item.gb + 'GB</strong></div>' +
+        '</div>' +
+        '<p class="modal-source">產品影像來源：<a href="' + escapeHtml(DEVICE_IMAGE_SOURCES[item.name] || "#") + '" target="_blank" rel="noopener">Wikipedia／Wikimedia 機型頁面</a></p>' +
         '</div></div>' +
       '</div>';
     modal.hidden = false;

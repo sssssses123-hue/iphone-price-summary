@@ -41,6 +41,12 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+          if git status --porcelain | grep -q "monitor/latest-report.md"; then
+            echo "report=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "report=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Commit verified official changes
         if: steps.changes.outputs.changed == 'true'
         shell: bash
@@ -52,7 +58,7 @@ jobs:
           git push
 
       - name: Open a notification issue
-        if: steps.changes.outputs.changed == 'true' && hashFiles('monitor/latest-report.md') != ''
+        if: steps.changes.outputs.changed == 'true' && steps.changes.outputs.report == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash

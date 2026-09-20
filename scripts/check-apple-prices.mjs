@@ -10,6 +10,8 @@ const DATA_FILE = path.join(ROOT, "data.js");
 const MONITOR_DIR = path.join(ROOT, "monitor");
 const STATE_FILE = path.join(MONITOR_DIR, "apple-price-state.json");
 const REPORT_FILE = path.join(MONITOR_DIR, "latest-report.md");
+const HEARTBEAT_FILE = path.join(MONITOR_DIR, "heartbeat.json");
+const HEARTBEAT_INTERVAL_MS = 30 * 24 * 60 * 60 * 1_000;
 
 const SOURCES = {
   us: "https://www.apple.com/shop/buy-iphone",
@@ -498,6 +500,38 @@ async function writeIfChanged(file, content) {
   return true;
 }
 
+async function writeHeartbeat(now, force = false) {
+  let previous = null;
+  try {
+    previous = JSON.parse(await fs.readFile(HEARTBEAT_FILE, "utf8"));
+  } catch {
+    // First heartbeat or intentionally missing file.
+  }
+
+  const previousTime = Date.parse(previous?.lastHeartbeatAt ?? "");
+  if (
+    !force &&
+    Number.isFinite(previousTime) &&
+    now.getTime() - previousTime < HEARTBEAT_INTERVAL_MS
+  ) {
+    return false;
+  }
+
+  const content =
+    JSON.stringify(
+      {
+        version: 1,
+        lastHeartbeatAt: now.toISOString(),
+        purpose:
+          "Monthly repository activity keeps the scheduled Apple price monitor enabled."
+      },
+      null,
+      2
+    ) + "\n";
+
+  if (!dryRun) await writeIfChanged(HEARTBEAT_FILE, content);
+  return true;
+}
 async function main() {
   log(`checking ${SOURCES.us}`);
   const usHtml = await fetchText(SOURCES.us, "us-buy.html");
@@ -617,6 +651,7 @@ async function main() {
   if (!previousState) {
     if (!dryRun) {
       await writeIfChanged(STATE_FILE, `${JSON.stringify(nextState, null, 2)}\n`);
+      await writeHeartbeat(now, true);
     }
     log("baseline state created; no update report on the first run");
     return;
@@ -634,7 +669,12 @@ async function main() {
     dataChanges.length || pageChanges.length || detailChanges.length;
 
   if (!meaningfulChange) {
-    log("no meaningful Apple lineup or price changes");
+    const heartbeatWritten = await writeHeartbeat(now);
+    log(
+      heartbeatWritten
+        ? "monthly heartbeat updated; scheduled monitoring remains active"
+        : "no meaningful Apple lineup or price changes"
+    );
     return;
   }
 
@@ -652,6 +692,7 @@ async function main() {
     }
     await writeIfChanged(STATE_FILE, `${JSON.stringify(nextState, null, 2)}\n`);
     await writeIfChanged(REPORT_FILE, report);
+    await writeHeartbeat(now, true);
   }
 
   log(

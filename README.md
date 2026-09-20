@@ -25,7 +25,7 @@ When a **new model** is found with an official US price, China price and startin
 
 When an **existing model** changes price, capacity or lineup status, the workflow commits the monitoring state and opens a GitHub Issue. Historical launch prices are deliberately not overwritten by later retail prices or promotions.
 
-The monitoring state is stored in `monitor/apple-price-state.json`; the latest notified change is written to `monitor/latest-report.md`.
+The monitoring state is stored in monitor/apple-price-state.json; the latest notified change is written to monitor/latest-report.md. A small monitor/heartbeat.json file is refreshed every 30 days so GitHub does not disable the schedule during long periods with no new iPhone launch.
 
 ## File Structure
 
@@ -37,6 +37,7 @@ The monitoring state is stored in `monitor/apple-price-state.json`; the latest n
 | `app.js` | Reads `data.js` and renders the table, chart and cards |
 | `scripts/check-apple-prices.mjs` | Official Apple page monitor and update writer |
 | `monitor/apple-price-state.json` | Baseline used to detect meaningful changes |
+| `monitor/heartbeat.json` | Monthly activity marker that keeps the schedule enabled |
 | `.github/workflows/apple-price-watch.yml` | Daily GitHub Actions schedule and notification |
 | `編輯說明.md` | Editing and maintenance guide (Traditional Chinese) |
 
@@ -99,7 +100,7 @@ Free to use for personal reference.
 - `scripts/check-apple-prices.mjs` 會讀取 Apple 官方美、中 `Buy iPhone` 頁面及各機型購買頁，比對價格、起始容量、陣容與新機標籤。
 - 發現**新機型**且美、中價格與起始容量都可從官方頁面確認時，會自動寫入 `data.js`、提交到 GitHub，GitHub Pages 隨後發布新版本。
 - 既有機型若價格、容量或陣容狀態改變，會提交監測狀態並開啟 GitHub Issue 通知；**不會用後來零售價或促銷價改寫歷史首發價**。
-- 基準資料位於 `monitor/apple-price-state.json`，最近一次通知內容位於 `monitor/latest-report.md`。
+- 基準資料位於 `monitor/apple-price-state.json`，最近一次通知內容位於 `monitor/latest-report.md`。`monitor/heartbeat.json` 每 30 天更新一次，避免 GitHub 因倉庫長期沒有活動而停用排程。
 
 ## 檔案結構
 
@@ -111,6 +112,7 @@ Free to use for personal reference.
 | `app.js` | 讀取 `data.js`，渲染表格、走勢圖與卡片 |
 | `scripts/check-apple-prices.mjs` | Apple 官方頁面監測與自動更新程式 |
 | `monitor/apple-price-state.json` | 判斷實質變動的基準資料 |
+| `monitor/heartbeat.json` | 每月活動標記，避免排程被 GitHub 停用 |
 | `.github/workflows/apple-price-watch.yml` | 每日排程與 GitHub Issue 通知 |
 | `編輯說明.md` | 編輯與維護教學（繁體中文） |
 

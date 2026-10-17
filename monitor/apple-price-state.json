@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastChangedAt": "2026-09-20T06:39:13.878Z",
+  "lastChangedAt": "2026-10-17T07:02:59.473Z",
   "sources": {
     "us": "https://www.apple.com/shop/buy-iphone",
     "cn": "https://www.apple.com.cn/shop/buy-iphone"
@@ -55,7 +55,7 @@
       },
       {
         "title": "iPhone Duo",
-        "eyebrow": "PRE-ORDER 10.16",
+        "eyebrow": "NEW",
         "price": 1999,
         "currency": "USD",
         "modelNames": [
@@ -112,7 +112,7 @@
       },
       {
         "title": "iPhone Duo",
-        "eyebrow": "10 月 16 日起接受预购",
+        "eyebrow": "新款",
         "price": 15999,
         "currency": "CNY",
         "modelNames": [
